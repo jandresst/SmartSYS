@@ -1,22 +1,29 @@
-import React from 'react';
+// src/components/ui/Button.tsx
+import React from "react";
 
 interface ButtonProps {
-  children?: React.ReactNode; // Permite insertar contenido dentro del botón
+  children: React.ReactNode;
   onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
-  className?: string;
+  variant?: "primary" | "secondary";
 }
 
-const Button: React.FC<ButtonProps> = ({ children, onClick, type = 'button', className }) => {
+export default function Button({
+  children,
+  onClick,
+  variant = "primary",
+}: ButtonProps) {
+  const baseClasses = "px-4 py-2 rounded-lg font-medium transition-colors";
+  const variantClasses = {
+    primary: "bg-primary text-white hover:bg-primary-dark",
+    secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300",
+  };
+
   return (
     <button
-      type={type}
       onClick={onClick}
-      className={`px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition ${className}`}
+      className={`${baseClasses} ${variantClasses[variant]}`}
     >
       {children}
     </button>
   );
-};
-
-export default Button;
+}

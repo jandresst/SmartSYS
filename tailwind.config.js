@@ -1,30 +1,21 @@
 module.exports = {
-  darkMode: 'class', // Cambia a 'media' si prefieres el modo oscuro basado en la configuración del sistema
-  purge: {
-    // Configuración para eliminar CSS no utilizado en producción
-    enabled: true,
-    content: [
-      "./index.html",
-      "./src/**/*.{js,ts,jsx,tsx}", // Asegúrate de incluir tus archivos
-    ],
-  },
+  darkMode: "class", // Habilita el modo oscuro basado en clases
+  
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}", // Busca clases en estos archivos
+  ],
+  
   theme: {
     extend: {
       colors: {
-        'brand': {
-          'primary': '#1DA1F2',
-          'secondary': '#14171A',
-          'accent': '#657786',
-        },
-        fontFamily: {
-          'sans': ['Inter', 'sans-serif'],
-          'serif': ['Merriweather', 'serif'],
-        },
+        primary: "#2A363B", // Tus colores personalizados
+        secondary: "#E84A5F",
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"], // Fuente personalizada
       },
     },
   },
-  variants: {
-    extend: {},
-  },
   plugins: [],
-}
+};
