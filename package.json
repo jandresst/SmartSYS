@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "web",
   "private": true,
   "version": "0.0.0",
@@ -29,4 +30,19 @@
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0"
   }
+=======
+  "name": "smartsys",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+>>>>>>> 184db88b79aeea84de52739aa39f5923dac374a8
 }
